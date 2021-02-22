@@ -1,10 +1,18 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
 
-const routes: Routes = [];
+import { AppComponent } from './app.component';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: ''
+    })
+  ],
+  providers: [],
+  declarations: [ AppComponent ],
+  bootstrap: [ AppComponent ]
 })
-export class AppRoutingModule { }
+export class AppModule {}
